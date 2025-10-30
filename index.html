@@ -87,21 +87,38 @@
 
   <footer>© 2025 | Acesso Exclusivo</footer>
 
-  <!-- Pixel Meta -->
+  <!-- Meta Pixel Code com PageView e Purchase -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2043115963189457'); 
-    fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  // Inicializa o pixel
+  fbq('init', '2043115963189457');
+
+  // Evento de PageView
+  fbq('track', 'PageView');
+
+  // Evento de Purchase ao clicar no botão de pagamento
+  document.addEventListener('DOMContentLoaded', function(){
+      var payButton = document.querySelector('.btn-pay');
+      if(payButton){
+          payButton.addEventListener('click', function(){
+              fbq('track', 'Purchase', {
+                  value: 19.90,
+                  currency: 'BRL'
+              });
+          });
+      }
+  });
   </script>
   <noscript>
-    <img height="1" width="1" 
+    <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2043115963189457&ev=PageView&noscript=1"/>
   </noscript>
 </body>
