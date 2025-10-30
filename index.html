@@ -5,19 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acesso Exclusivo 🔥</title>
   <style>
+    /* Corpo da página */
     body {
-      background: linear-gradient(135deg, #111, #222);
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
       color: #fff;
       font-family: "Poppins", sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
       text-align: center;
     }
 
+    /* Fundo animado borrado */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+      animation: slide 25s infinite alternate;
+    }
+
+    @keyframes slide {
+      0%   { background-image: url('https://imagem.natelinha.uol.com.br/original/mel-maia-instagram_1324.jpeg'); }
+      20%  { background-image: url('https://fapello.com/content/g/o/gostosas-vazadas/1000/gostosas-vazadas_0038.jpg'); }
+      40%  { background-image: url('https://www.testosterona.blog.br/wp-content/uploads/2025/04/Nudes-vazados-de-famosas-playboy.webp'); }
+      60%  { background-image: url('https://www.bruninha.net/wp-content/uploads/2025/08/cashbxnny.jpg.webp'); }
+      80%  { background-image: url('https://www.bruninha.net/wp-content/uploads/2025/10/Camisss_.jpg.webp'); }
+      100% { background-image: url('https://imagem.natelinha.uol.com.br/original/mel-maia-instagram_1324.jpeg'); }
+    }
+
+    /* Títulos e parágrafos */
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
@@ -30,6 +54,7 @@
       max-width: 90%;
     }
 
+    /* Botões */
     .btn {
       display: block;
       width: 260px;
@@ -71,20 +96,35 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    /* Frase explicativa abaixo do botão de prévias */
+    .preview-text {
+      font-size: 0.95rem;
+      color: #bbb;
+      margin-top: -5px;
+      margin-bottom: 25px;
+    }
+
   </style>
 </head>
 <body>
   <h1>🔥 Acesso Exclusivo 🔥</h1>
-  <p>🔥Entre no grupo de prévias ou aproveite o desconto e libere o conteúdo completo agora.</p>
+  <p>Entre no grupo de prévias ou garanta agora o acesso vitalício com desconto especial!</p>
 
+  <!-- Botão grupo de prévias -->
   <a href="https://t.me/VazadosDefamosasGostosas" class="btn btn-preview" target="_blank">
     👀 Entrar no Grupo de Prévias
   </a>
+  <p class="preview-text">
+    👉 Entre para ver um pouco do conteúdo antes de liberar o acesso completo, ou já garanta o seu desconto!
+  </p>
 
+  <!-- Botão pagamento -->
   <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" class="btn btn-pay" target="_blank">
     ⏰ Garantir agora últimas vagas com desconto
   </a>
 
+  <footer>© 2025 | Acesso Exclusivo</footer>
 
   <!-- Pixel Meta -->
   <script>
