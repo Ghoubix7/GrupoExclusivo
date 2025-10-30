@@ -41,20 +41,21 @@
       100% { background-image: url('https://imagem.natelinha.uol.com.br/original/mel-maia-instagram_1324.jpeg'); }
     }
 
-    /* Camada escura para contraste */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5); /* ajuste a opacidade se quiser mais ou menos escuro */
-      z-index: -1;
+    /* Camada escura atrás do conteúdo */
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5); /* ajuste opacidade se quiser mais escuro */
+      padding: 30px 20px;
+      border-radius: 15px;
+      max-width: 500px;
     }
 
     /* Títulos e parágrafos */
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
     p {
@@ -62,7 +63,7 @@
       color: #ccc;
       margin-bottom: 40px;
       max-width: 90%;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
     /* Botões */
@@ -116,26 +117,28 @@
       color: #bbb;
       margin-top: -5px;
       margin-bottom: 25px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
   </style>
 </head>
 <body>
-  <h1>🔥 Acesso Exclusivo 🔥</h1>
-  <p>Entre no grupo de prévias ou garanta agora o acesso vitalício com desconto especial!</p>
+  <div class="content-wrapper">
+    <h1>🔥 Acesso Exclusivo 🔥</h1>
+    <p>Entre no grupo de prévias ou garanta agora o acesso vitalício com desconto especial!</p>
 
-  <!-- Botão grupo de prévias -->
-  <a href="https://t.me/VazadosDefamosasGostosas" class="btn btn-preview" target="_blank">
-    👀 Entrar no Grupo de Prévias
-  </a>
-  <p class="preview-text">
-    👉 Entre para ver um pouco do conteúdo antes de liberar o acesso completo, ou já garanta o seu desconto!
-  </p>
+    <!-- Botão grupo de prévias -->
+    <a href="https://t.me/VazadosDefamosasGostosas" class="btn btn-preview" target="_blank">
+      👀 Entrar no Grupo de Prévias
+    </a>
+    <p class="preview-text">
+      👉 Entre para ver um pouco do conteúdo antes de liberar o acesso completo, ou já garanta o seu desconto!
+    </p>
 
-  <!-- Botão pagamento -->
-  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" class="btn btn-pay" target="_blank">
-    ⏰ Garantir agora últimas vagas com desconto
-  </a>
+    <!-- Botão pagamento -->
+    <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" class="btn btn-pay" target="_blank">
+      ⏰ Garantir agora últimas vagas com desconto
+    </a>
+  </div>
 
   <footer>© 2025 | Acesso Exclusivo</footer>
 
