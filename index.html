@@ -105,7 +105,7 @@
       const payButton = document.querySelector('.btn-pay');
       if(payButton){
         payButton.addEventListener('click', function(){
-          fbq('track', 'Purchase', { value: 19.90, currency: 'BRL' });
+          fbq('track', 'InitiateCheckout');
         });
       }
     });
