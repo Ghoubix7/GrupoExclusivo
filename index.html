@@ -105,15 +105,24 @@
   // PageView para ambos
   fbq('track', 'PageView');
 
-  // Evento InitiateCheckout para Pixel novo
+  // Eventos para os botões
   document.addEventListener('DOMContentLoaded', function(){
+    // Botão de pagamento → InitiateCheckout
     const payButton = document.querySelector('.btn-pay');
     if(payButton){
       payButton.addEventListener('click', function(){
         fbq('track', 'InitiateCheckout', {
           value: 19.90,
           currency: 'BRL'
-        }, {pixelId: '2362506854208367'}); // garante que só o Pixel novo receba o evento
+        }, {pixelId: '2362506854208367'}); // Pixel novo
+      });
+    }
+
+    // Botão de prévias → Lead
+    const previewButton = document.querySelector('.btn-preview');
+    if(previewButton){
+      previewButton.addEventListener('click', function(){
+        fbq('track', 'Lead'); // envia Lead para ambos os pixels
       });
     }
   });
