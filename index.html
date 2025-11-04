@@ -102,27 +102,29 @@
   fbq('init', '2043115963189457'); // Pixel antigo
   fbq('init', '2362506854208367'); // Pixel novo
 
-  // PageView para ambos
+  // PageView
   fbq('track', 'PageView');
 
-  document.addEventListener('DOMContentLoaded', function() {
-
-    // 🟣 Botão de prévias → Lead (sem valor)
-    const previewButton = document.querySelector('.btn-preview');
-    if (previewButton) {
-      previewButton.addEventListener('click', function() {
-        fbq('track', 'Lead'); // Envia para ambos os pixels
+  document.addEventListener('DOMContentLoaded', function(){
+    // Botão de pagamento → InitiateCheckout (com value e currency)
+    const payButton = document.querySelector('.btn-pay');
+    if(payButton){
+      payButton.addEventListener('click', function(){
+        fbq('track', 'InitiateCheckout', {
+          value: 12.90,
+          currency: 'BRL'
+        });
       });
     }
 
-    // 🔥 Botão de pagamento → Lead (com valor e moeda)
-    const payButton = document.querySelector('.btn-pay');
-    if (payButton) {
-      payButton.addEventListener('click', function() {
+    // Botão de prévias → Lead
+    const previewButton = document.querySelector('.btn-preview');
+    if(previewButton){
+      previewButton.addEventListener('click', function(){
         fbq('track', 'Lead', {
-          value: 9.90,
+          value: 0,
           currency: 'BRL'
-        }); // Envia para ambos os pixels
+        });
       });
     }
   });
