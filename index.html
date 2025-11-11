@@ -98,15 +98,10 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  // Inicializa o Pixel com correspondência avançada (telefone)
-  fbq('init', '2043115963189457', {
-    ph: '5511999999999' // substitua pelo número do lead (somente números)
-  });
-
-  // PageView
+  // Inicializa o pixel (sem correspondência manual, pois o gateway já envia)
+  fbq('init', '2043115963189457');
   fbq('track', 'PageView');
 
-  // Eventos para os botões
   document.addEventListener('DOMContentLoaded', function(){
     // Botão de pagamento → InitiateCheckout
     const payButton = document.querySelector('.btn-pay');
