@@ -98,15 +98,17 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  // Inicializa os dois Pixels
-  fbq('init', '2043115963189457'); // Pixel antigo
-  fbq('init', '2362506854208367'); // Pixel novo
+  // Inicializa o Pixel com correspondência avançada (telefone)
+  fbq('init', '2043115963189457', {
+    ph: '5511999999999' // substitua pelo número do lead (somente números)
+  });
 
   // PageView
   fbq('track', 'PageView');
 
+  // Eventos para os botões
   document.addEventListener('DOMContentLoaded', function(){
-    // Botão de pagamento → InitiateCheckout (com value e currency)
+    // Botão de pagamento → InitiateCheckout
     const payButton = document.querySelector('.btn-pay');
     if(payButton){
       payButton.addEventListener('click', function(){
@@ -133,8 +135,6 @@
   <noscript>
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2043115963189457&ev=PageView&noscript=1"/>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2362506854208367&ev=PageView&noscript=1"/>
   </noscript>
 </body>
 </html>
