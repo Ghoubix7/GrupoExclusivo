@@ -17,19 +17,16 @@
       margin: 0;
       text-align: center;
     }
-
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
     }
-
     p {
       font-size: 1.1rem;
       color: #ccc;
       margin-bottom: 40px;
       max-width: 90%;
     }
-
     .btn {
       display: block;
       width: 260px;
@@ -45,43 +42,22 @@
       text-decoration: none;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
-
-    .btn-preview {
-      background: #444;
-      color: #fff;
-    }
-
-    .btn-preview:hover {
-      background: #666;
-      transform: scale(1.03);
-    }
-
-    .btn-pay {
-      background: linear-gradient(90deg, #ff0057, #ff7b00);
-      color: white;
-    }
-
-    .btn-pay:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
-    }
-
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #777;
-    }
+    .btn-preview { background: #444; color: #fff; }
+    .btn-preview:hover { background: #666; transform: scale(1.03); }
+    .btn-pay { background: linear-gradient(90deg, #ff0057, #ff7b00); color: white; }
+    .btn-pay:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 120, 0, 0.6); }
+    footer { margin-top: 50px; font-size: 0.9rem; color: #777; }
   </style>
 </head>
 <body>
   <h1>🔥 Acesso Exclusivo 🔥</h1>
   <p>Entre no grupo de prévias ou garanta agora o acesso vitalício com desconto especial!</p>
 
-  <a href="https://t.me/VazadosDefamosasGostosas" class="btn btn-preview" target="_blank">
+  <a href="https://t.me/VazadosDefamosasGostosas" id="btn-previas" class="btn btn-preview" target="_blank">
     👀 Entrar no Grupo de Prévias
   </a>
 
-  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" class="btn btn-pay" target="_blank">
+  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" id="btn-pagamento" class="btn btn-pay" target="_blank">
     ⏰ Garantir agora últimas vagas com desconto
   </a>
 
@@ -89,38 +65,43 @@
 
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
 
-  // Inicializa os dois Pixels
-  fbq('init', '2043115963189457'); // Pixel antigo
-  fbq('init', '1174595527982213'); // Pixel novo
+    // Inicializa os dois pixels
+    fbq('init', '2043115963189457');
+    fbq('init', '1174595527982213');
 
-  // PageView para ambos
-  fbq('track', 'PageView');
+    // Envia PageView para ambos
+    fbq('track', 'PageView');
 
-  // Eventos para os botões
-  document.addEventListener('DOMContentLoaded', function(){
-    // Botão de pagamento → InitiateCheckout
-    const payButton = document.querySelector('.btn-pay');
-    if(payButton){
-      payButton.addEventListener('click', function(){
-        fbq('track', 'InitiateCheckout', {
-          value: 12.90,
-          currency: 'BRL'
-        });
-      });
+    // Funções para enviar eventos
+    function enviarEvento(evento, dados) {
+      fbq('track', evento, dados);
     }
 
-    // Botão de prévias → Lead
-    const previewButton = document.querySelector('.btn-preview');
-    if(previewButton){
-      previewButton.addEventListener('click', function(){
-        fbq('track', 'Lead', {
-          value: 0
+    // Evento de clique no botão de pagamento
+    document.getElementById('btn-pagamento').addEventListener('click', function() {
+      enviarEvento('InitiateCheckout', { value: 12.90, currency: 'BRL' });
+    });
+
+    // Evento de clique no botão de prévias
+    document.getElementById('btn-previas').addEventListener('click', function() {
+      enviarEvento('Lead', { value: 0, currency: 'BRL' });
+    });
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2043115963189457&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1174595527982213&ev=PageView&noscript=1"/>
+  </noscript>
+</body>
+</html>
