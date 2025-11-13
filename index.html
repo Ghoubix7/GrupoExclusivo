@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acesso Exclusivo 🔥</title>
+
+  <!-- UTMify -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+
   <style>
     body {
       background: linear-gradient(135deg, #111, #222);
@@ -57,7 +67,11 @@
     👀 Entrar no Grupo de Prévias
   </a>
 
-  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" id="btn-pagamento" class="btn btn-pay" target="_blank">
+  <!-- Adicionadas UTMs automáticas -->
+  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558?utm_source=FB&utm_campaign={{campaign.name}}|{{campaign.id}}&utm_medium={{adset.name}}|{{adset.id}}&utm_content={{ad.name}}|{{ad.id}}&utm_term={{placement}}" 
+     id="btn-pagamento" 
+     class="btn btn-pay" 
+     target="_blank">
     ⏰ Garantir agora últimas vagas com desconto
   </a>
 
@@ -103,5 +117,32 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1174595527982213&ev=PageView&noscript=1"/>
   </noscript>
+
+  <!-- Script BackRedirect -->
+  <script>
+    // ALTERE O LINK PARA A PÁGINA DE REDIRECIONAMENTO
+    const link = 'https://meubackredirect.com.br';
+
+    function setBackRedirect(url) {
+      let urlBackRedirect = url;
+      urlBackRedirect =
+        urlBackRedirect.trim() +
+        (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+        document.location.search.replace('?', '').toString();
+
+      history.pushState({}, '', location.href);
+      history.pushState({}, '', location.href);
+      history.pushState({}, '', location.href);
+
+      window.addEventListener('popstate', () => {
+        setTimeout(() => {
+          location.href = urlBackRedirect;
+        }, 1);
+      });
+    }
+
+    setBackRedirect(link);
+  </script>
+
 </body>
 </html>
