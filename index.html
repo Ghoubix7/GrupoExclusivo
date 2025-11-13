@@ -4,16 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acesso Exclusivo 🔥</title>
-
-  <!-- UTMify -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    async
-    defer
-  ></script>
-
   <style>
     body {
       background: linear-gradient(135deg, #111, #222);
@@ -27,51 +17,99 @@
       margin: 0;
       text-align: center;
     }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 1.1rem;
       color: #ccc;
       margin-bottom: 40px;
       max-width: 90%;
     }
+
     .btn {
       display: block;
-      width: 260px;
+      width: 270px;
       padding: 15px 20px;
       margin: 12px auto;
       border: none;
-      border-radius: 12px;
+      border-radius: 14px;
       font-size: 1rem;
       font-weight: bold;
       text-transform: uppercase;
       cursor: pointer;
       transition: 0.3s;
       text-decoration: none;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
-    .btn-preview { background: #444; color: #fff; }
-    .btn-preview:hover { background: #666; transform: scale(1.03); }
-    .btn-pay { background: linear-gradient(90deg, #ff0057, #ff7b00); color: white; }
-    .btn-pay:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 120, 0, 0.6); }
-    footer { margin-top: 50px; font-size: 0.9rem; color: #777; }
+
+    .btn-preview {
+      background: #444;
+      color: #fff;
+    }
+
+    .btn-preview:hover {
+      background: #666;
+      transform: scale(1.03);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(90deg, #25D366, #128C7E);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+    }
+
+    .btn-whatsapp img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .btn-pay {
+      background: linear-gradient(90deg, #ff0057, #ff7b00);
+      color: white;
+    }
+
+    .btn-pay:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
+    }
   </style>
 </head>
 <body>
   <h1>🔥 Acesso Exclusivo 🔥</h1>
-  <p>Entre no grupo de prévias ou garanta agora o acesso vitalício com desconto especial!</p>
+  <p>Entre no grupo de prévias, fale com o suporte ou garanta seu acesso com desconto especial!</p>
 
   <a href="https://t.me/VazadosDefamosasGostosas" id="btn-previas" class="btn btn-preview" target="_blank">
     👀 Entrar no Grupo de Prévias
   </a>
 
-  <!-- Adicionadas UTMs automáticas -->
-  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558?utm_source=FB&utm_campaign={{campaign.name}}|{{campaign.id}}&utm_medium={{adset.name}}|{{adset.id}}&utm_content={{ad.name}}|{{ad.id}}&utm_term={{placement}}" 
-     id="btn-pagamento" 
-     class="btn btn-pay" 
-     target="_blank">
+  <a href="https://wa.me/+5514981400896?text=Oii,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20Grupo%20VIP."
+     id="btn-whatsapp" class="btn btn-whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    Falar no WhatsApp
+  </a>
+
+  <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" id="btn-pagamento" class="btn btn-pay" target="_blank">
     ⏰ Garantir agora últimas vagas com desconto
   </a>
 
@@ -82,67 +120,37 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    // Inicializa os dois pixels
-    fbq('init', '2043115963189457');
+    // Inicializa o Pixel
     fbq('init', '1174595527982213');
-
-    // Envia PageView para ambos
     fbq('track', 'PageView');
 
-    // Funções para enviar eventos
+    // Eventos
     function enviarEvento(evento, dados) {
       fbq('track', evento, dados);
     }
 
-    // Evento de clique no botão de pagamento
-    document.getElementById('btn-pagamento').addEventListener('click', function() {
-      enviarEvento('InitiateCheckout', { value: 12.90, currency: 'BRL' });
-    });
-
-    // Evento de clique no botão de prévias
     document.getElementById('btn-previas').addEventListener('click', function() {
       enviarEvento('Lead', { value: 0, currency: 'BRL' });
+    });
+
+    document.getElementById('btn-whatsapp').addEventListener('click', function() {
+      enviarEvento('Lead', { value: 0, currency: 'BRL' });
+    });
+
+    document.getElementById('btn-pagamento').addEventListener('click', function() {
+      enviarEvento('InitiateCheckout', { value: 12.90, currency: 'BRL' });
     });
   </script>
 
   <noscript>
     <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=2043115963189457&ev=PageView&noscript=1"/>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1174595527982213&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=1174595527982213&ev=PageView&noscript=1"/>
   </noscript>
-
-  <!-- Script BackRedirect -->
-  <script>
-    // ALTERE O LINK PARA A PÁGINA DE REDIRECIONAMENTO
-    const link = 'https://meubackredirect.com.br';
-
-    function setBackRedirect(url) {
-      let urlBackRedirect = url;
-      urlBackRedirect =
-        urlBackRedirect.trim() +
-        (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-        document.location.search.replace('?', '').toString();
-
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-      history.pushState({}, '', location.href);
-
-      window.addEventListener('popstate', () => {
-        setTimeout(() => {
-          location.href = urlBackRedirect;
-        }, 1);
-      });
-    }
-
-    setBackRedirect(link);
-  </script>
-
 </body>
 </html>
