@@ -142,28 +142,28 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    .foto-topo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+      filter: blur(1px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
   </style>
 </head>
 <body>
+
  <!-- FOTO DE PERFIL -->
 <img 
-  src="https://drive.google.com/file/d/1XtGo3c5S6dX4pk8cPU370d3UfqxOABaF/view?usp=sharing"
+  src="https://drive.google.com/uc?export=view&id=1XtGo3c5S6dX4pk8cPU370d3UfqxOABaF"
   alt="Foto de perfil"
   class="foto-topo"
 />
 
-<style>
-  .foto-topo {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.3);
-    margin-bottom: 20px;
-    filter: blur(1px); /* deixe maior se quiser mais borrado */
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-  }
-</style>
   <h1>🔥 Meus Conteúdos 🔥</h1>
   <p>Entre no grupo de prévias, fale no WhatsApp ou garanta agora o acesso com desconto especial!</p>
 
@@ -200,5 +200,6 @@
       enviarEvento('InitiateCheckout', { value: 10.00, currency: 'BRL' });
     });
   </script>
+
 </body>
 </html>
