@@ -36,11 +36,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      padding-top: 40px;
       margin: 0;
       text-align: center;
-      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    /* FOTO DE PERFIL */
+    .foto-topo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+      filter: blur(1px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
     }
 
     h1 {
@@ -79,6 +90,7 @@
       color: #fff;
     }
 
+    /* EFEITO PULSE */
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.1); }
       50% { transform: scale(1.04); box-shadow: 0 0 25px rgba(255,255,255,0.2); }
@@ -102,19 +114,23 @@
       transition: 0.7s;
     }
 
+    /* WHATSAPP */
     .btn-whatsapp {
       background: linear-gradient(90deg, #25D366, #128C7E);
       box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
     }
+
     .btn-whatsapp:hover {
       transform: scale(1.07);
       box-shadow: 0 0 30px rgba(37, 211, 102, 0.9);
     }
+
     .btn-whatsapp img {
       width: 22px;
       height: 22px;
     }
 
+    /* TELEGRAM */
     .btn-preview {
       background: linear-gradient(90deg, #0088cc, #00bfff);
       box-shadow: 0 0 20px rgba(0, 136, 204, 0.6);
@@ -128,6 +144,7 @@
       height: 22px;
     }
 
+    /* PAGAMENTO */
     .btn-pay {
       background: linear-gradient(90deg, #ff0057, #ff7b00);
       box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
@@ -142,25 +159,17 @@
       font-size: 0.9rem;
       color: #777;
     }
-
-    .foto-topo {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.3);
-      margin-bottom: 20px;
-      filter: blur(1px);
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
-    }
   </style>
 </head>
 <body>
-<img 
-  src="https://imgur.com/a/g3oFK19"
-  alt="Foto de perfil"
-  class="foto-topo"
-/>
+
+  <!-- FOTO FUNCIONANDO DO IMGUR -->
+  <img 
+    src="https://i.imgur.com/qrB3daa.jpeg"
+    alt="Foto de perfil"
+    class="foto-topo"
+  />
+
   <h1>🔥 Meus Conteúdos 🔥</h1>
   <p>Entre no grupo de prévias, fale no WhatsApp ou garanta agora o acesso com desconto especial!</p>
 
