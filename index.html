@@ -184,6 +184,31 @@
 
   <footer>© 2025 | Meus Conteúdos</footer>
 
+  <!-- 🔒 ANTI-BOT (INSERIDO ENTRE AS LINHAS 190–230) -->
+  <script>
+    // Esconde os botões inicialmente
+    document.getElementById("btn-whatsapp").style.display = "none";
+    document.getElementById("btn-previas").style.display = "none";
+    document.getElementById("btn-pagamento").style.display = "none";
+
+    let ativado = false;
+
+    function liberarBotoes() {
+      if (ativado) return;
+      ativado = true;
+
+      document.getElementById("btn-whatsapp").style.display = "flex";
+      document.getElementById("btn-previas").style.display = "flex";
+      document.getElementById("btn-pagamento").style.display = "flex";
+    }
+
+    window.addEventListener("mousemove", liberarBotoes);
+    window.addEventListener("touchstart", liberarBotoes);
+    window.addEventListener("scroll", liberarBotoes);
+    window.addEventListener("keydown", liberarBotoes);
+  </script>
+
+  <!-- EVENTOS DO PIXEL -->
   <script>
     document.getElementById('btn-previas').addEventListener('click', function() {
       enviarEvento('Lead', { value: 0, currency: 'BRL' });
