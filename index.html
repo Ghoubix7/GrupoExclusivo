@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta viewport="width=device-width, initial-scale=1.0" />
-  <title>Acesso Exclusivo 🔥</title>
+  <title>Meus Conteúdos 🔥</title>
+
+  <!-- META PIXEL -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '860586806429399');
+    fbq('track', 'PageView');
+
+    function enviarEvento(evento, dados) {
+      fbq('track', evento, dados);
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=860586806429399&ev=PageView&noscript=1"/>
+  </noscript>
+
   <style>
     body {
       background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
@@ -121,14 +145,14 @@
   </style>
 </head>
 <body>
-  <h1>🔥 Acesso Exclusivo 🔥</h1>
+  <h1>🔥 Meus Conteúdos 🔥</h1>
   <p>Entre no grupo de prévias, fale no WhatsApp ou garanta agora o acesso com desconto especial!</p>
 
-  <!-- WHATSAPP — AGORA EM CIMA -->
+  <!-- WHATSAPP -->
   <a href="https://wa.me/+5514981400896?text=Oii,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20Grupo%20VIP."
      id="btn-whatsapp" class="btn btn-whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    Falar no WhatsApp
+    Conversar comigo no Whatsapp😈🔞
   </a>
 
   <!-- TELEGRAM -->
@@ -139,29 +163,12 @@
 
   <!-- PAGAMENTO -->
   <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" id="btn-pagamento" class="btn btn-pay" target="_blank">
-    💳 Garantir agora últimas vagas com desconto
+    💳 Garantir agora meu grupo exclusivo com todos meus conteúdos com desconto
   </a>
 
-  <footer>© 2025 | Acesso Exclusivo</footer>
+  <footer>© 2025 | Meus Conteúdos</footer>
 
-  <!-- META PIXEL -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '860586806429399');
-    fbq('track', 'PageView');
-
-    function enviarEvento(evento, dados) {
-      fbq('track', evento, dados);
-    }
-
     document.getElementById('btn-previas').addEventListener('click', function() {
       enviarEvento('Lead', { value: 0, currency: 'BRL' });
     });
@@ -174,10 +181,5 @@
       enviarEvento('InitiateCheckout', { value: 10.00, currency: 'BRL' });
     });
   </script>
-
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=860586806429399&ev=PageView&noscript=1"/>
-  </noscript>
 </body>
 </html>
