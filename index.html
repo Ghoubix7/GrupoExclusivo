@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta viewport="width=device-width, initial-scale=1.0" />
   <title>Acesso Exclusivo 🔥</title>
   <style>
     body {
@@ -52,6 +52,7 @@
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
       overflow: hidden;
       animation: pulse 2.2s infinite;
+      color: #fff;
     }
 
     @keyframes pulse {
@@ -60,7 +61,6 @@
       100% { transform: scale(1); box-shadow: 0 0 10px rgba(255,255,255,0.1); }
     }
 
-    /* Brilho passando */
     .btn::before {
       content: "";
       position: absolute;
@@ -78,44 +78,36 @@
       transition: 0.7s;
     }
 
-    .btn-preview {
-      background: linear-gradient(90deg, #0088cc, #00bfff);
-      color: #fff;
-      box-shadow: 0 0 20px rgba(0, 136, 204, 0.6);
-    }
-
-    .btn-preview:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 30px rgba(0, 180, 255, 0.9);
-    }
-
-    .btn-preview img {
-      width: 22px;
-      height: 22px;
-    }
-
     .btn-whatsapp {
       background: linear-gradient(90deg, #25D366, #128C7E);
-      color: #fff;
       box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
     }
-
     .btn-whatsapp:hover {
       transform: scale(1.07);
       box-shadow: 0 0 30px rgba(37, 211, 102, 0.9);
     }
-
     .btn-whatsapp img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .btn-preview {
+      background: linear-gradient(90deg, #0088cc, #00bfff);
+      box-shadow: 0 0 20px rgba(0, 136, 204, 0.6);
+    }
+    .btn-preview:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 30px rgba(0, 180, 255, 0.9);
+    }
+    .btn-preview img {
       width: 22px;
       height: 22px;
     }
 
     .btn-pay {
       background: linear-gradient(90deg, #ff0057, #ff7b00);
-      color: white;
       box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
     }
-
     .btn-pay:hover {
       transform: scale(1.07);
       box-shadow: 0 0 35px rgba(255, 120, 0, 0.9);
@@ -132,38 +124,40 @@
   <h1>🔥 Acesso Exclusivo 🔥</h1>
   <p>Entre no grupo de prévias, fale no WhatsApp ou garanta agora o acesso com desconto especial!</p>
 
-  <a href="https://t.me/VazadosDefamosasGostosas" id="btn-previas" class="btn btn-preview" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-    Entrar no Grupo de Prévias
-  </a>
-
+  <!-- WHATSAPP — AGORA EM CIMA -->
   <a href="https://wa.me/+5514981400896?text=Oii,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20Grupo%20VIP."
      id="btn-whatsapp" class="btn btn-whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     Falar no WhatsApp
   </a>
 
+  <!-- TELEGRAM -->
+  <a href="https://t.me/VazadosDefamosasGostosas" id="btn-previas" class="btn btn-preview" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    Entrar no Grupo de Prévias
+  </a>
+
+  <!-- PAGAMENTO -->
   <a href="https://p.hoopay.com.br/v/0772f7f0-db51-43cc-bba9-b0879566b558" id="btn-pagamento" class="btn btn-pay" target="_blank">
     💳 Garantir agora últimas vagas com desconto
   </a>
 
   <footer>© 2025 | Acesso Exclusivo</footer>
 
-  <!-- Meta Pixel Code -->
+  <!-- META PIXEL -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1174595527982213');
+    fbq('init', '860586806429399');
     fbq('track', 'PageView');
 
-    // Função de evento
     function enviarEvento(evento, dados) {
       fbq('track', evento, dados);
     }
@@ -183,7 +177,7 @@
 
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1174595527982213&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=860586806429399&ev=PageView&noscript=1"/>
   </noscript>
 </body>
 </html>
