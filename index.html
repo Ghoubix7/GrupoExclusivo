@@ -192,5 +192,70 @@
   </a>
 
   <footer>© 2025 | Meus Conteúdos</footer>
+  <script>
+  // ========= CONTADORES =========
+  let clicks = JSON.parse(localStorage.getItem("clickData")) || {
+    whatsapp: 0,
+    previas: 0,
+    pagamento: 0
+  };
+
+  function saveClicks() {
+    localStorage.setItem("clickData", JSON.stringify(clicks));
+  }
+
+  // Adiciona contagem aos botões
+  document.getElementById("btn-whatsapp").addEventListener("click", () => {
+    clicks.whatsapp++;
+    saveClicks();
+  });
+
+  document.getElementById("btn-previas").addEventListener("click", () => {
+    clicks.previas++;
+    saveClicks();
+  });
+
+  document.getElementById("btn-pagamento").addEventListener("click", () => {
+    clicks.pagamento++;
+    saveClicks();
+  });
+
+
+  // ========= SISTEMA SECRETO =========
+  let secretClicks = 0;
+
+  // Clique 5x no rodapé para abrir a senha
+  document.querySelector("footer").addEventListener("click", () => {
+    secretClicks++;
+    if (secretClicks >= 5) {
+      const senha = prompt("🔐 Digite sua senha para acessar o painel:");
+      if (senha === "isadora123") {  // <<< MUDE AQUI SUA SENHA
+        window.location.href = "#admin-panel";
+        abrirPainelAdmin();
+      } else {
+        alert("❌ Senha incorreta!");
+      }
+      secretClicks = 0;
+    }
+  });
+
+  // Painel Admin
+  function abrirPainelAdmin() {
+    document.getElementById("admin-area").style.display = "block";
+    document.getElementById("admin-whatsapp").innerText = clicks.whatsapp;
+    document.getElementById("admin-previas").innerText = clicks.previas;
+    document.getElementById("admin-pagamento").innerText = clicks.pagamento;
+  }
+</script>
+
+
+<!-- ========= PAINEL ESCONDIDO ========= -->
+<div id="admin-area" 
+     style="display:none; background:#111; padding:30px; margin-top:40px; border:2px solid #444; border-radius:12px; width:90%; max-width:400px; text-align:left;">
+  <h2 style="text-align:center;">🔐 Painel Secreto</h2>
+  <p><strong>Clique WhatsApp:</strong> <span id="admin-whatsapp"></span></p>
+  <p><strong>Clique Prévias:</strong> <span id="admin-previas"></span></p>
+  <p><strong>Clique Pagamento:</strong> <span id="admin-pagamento"></span></p>
+</div>
 </body>
 </html>
