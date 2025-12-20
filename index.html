@@ -154,6 +154,24 @@
       font-size: 0.9rem;
       color: #777;
     }
+    
+    .btn-privacy {
+  background: linear-gradient(90deg, #111, #000);
+  box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
+  letter-spacing: 1px;
+}
+
+.btn-privacy:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgba(255, 0, 87, 0.9);
+}
+
+.btn-privacy img {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+}
+
   </style>
 </head>
 <body>
@@ -183,14 +201,17 @@
     Entrar no meu Grupo de Prévias
   </a>
   
-  <!-- BOTÃO 3 (Lead) -->
-  <a href="https://p.hoopay.com.br/v/7210c792-ce10-4ef9-bbc3-27480a2464b9"
-     id="btn-pagamento" 
-     class="btn btn-pay"
-     target="_blank"
-     onclick="fbq('track', 'Lead');">
-    💳 Garantir agora meu grupo exclusivo com todos meus conteúdos com desconto
-  </a>
+ <!-- BOTÃO PRIVACY -->
+<a href="#"
+   id="btn-pagamento"
+   class="btn btn-pay btn-privacy"
+   target="_blank"
+   onclick="fbq('track', 'Lead');">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Privacy_logo.png" alt="Privacy">
+  <span>Meu Privacy</span>
+</a>
+
 
   <footer>© 2024 | Meus Conteúdos</footer>
   <script>
