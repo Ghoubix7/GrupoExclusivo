@@ -141,21 +141,33 @@
     }
 
    /* Ajuste do botão Privacy */
+/* Botão Privacy */
 .btn-privacy {
-  background: linear-gradient(90deg, #111, #000); /* já estava igual */
+  background: linear-gradient(90deg, #111, #000);
   box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
   letter-spacing: 1px;
-
-  /* Ajuste do layout */
-  justify-content: flex-start; /* logo e texto alinhados à esquerda */
-  padding-left: 20px; /* espaço do canto esquerdo */
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  justify-content: flex-start; /* texto ao lado da logo */
 }
 
-.btn-privacy img {
+/* Logo dentro do botão */
+.btn-privacy .btn-logo img {
   width: 26px;
   height: 26px;
+  display: block;
+  margin-right: 10px; /* espaço entre logo e texto */
   filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
 }
+
+/* Texto dentro do botão */
+.btn-privacy .btn-text {
+  flex: 1; /* faz o texto ocupar espaço restante */
+  text-align: center; /* centraliza o texto no botão */
+}
+
 
 
     footer {
@@ -193,14 +205,19 @@
   </a>
   
   <!-- BOTÃO PRIVACY -->
- <a href="COLE_AQUI_O_LINK_DO_SEU_SITE" 
+<!-- BOTÃO PRIVACY -->
+<a href="COLE_AQUI_O_LINK_DO_SEU_SITE" 
    id="btn-pagamento"
    class="btn btn-privacy"
-   target="_blank" rel="noopener nore
-    <!-- COLE AQUI O LOGO DO SEU SITE -->
+   target="_blank" rel="noopener noreferrer"
+   onclick="enviarEvento('Lead');">
+  <!-- Container interno para logo -->
+  <span class="btn-logo">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd4NkCROqqNrGwjEUEiBv_9DJqMLBjQOa4eg&s" alt="Privacy">
-    Meu Privacy
-  </a>
+  </span>
+  <span class="btn-text">Meu Privacy</span>
+</a>
+
 
   <footer>© 2024 | Meus Conteúdos</footer>
 
