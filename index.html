@@ -140,20 +140,23 @@
       height: 22px;
     }
 
-    .btn-privacy {
-      background: linear-gradient(90deg, #111, #000);
-      box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
-      letter-spacing: 1px;
-    }
-    .btn-privacy:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 40px rgba(255, 0, 87, 0.9);
-    }
-    .btn-privacy img {
-      width: 26px;
-      height: 26px;
-      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
-    }
+   /* Ajuste do botão Privacy */
+.btn-privacy {
+  background: linear-gradient(90deg, #111, #000); /* já estava igual */
+  box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
+  letter-spacing: 1px;
+
+  /* Ajuste do layout */
+  justify-content: flex-start; /* logo e texto alinhados à esquerda */
+  padding-left: 20px; /* espaço do canto esquerdo */
+}
+
+.btn-privacy img {
+  width: 26px;
+  height: 26px;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+}
+
 
     footer {
       margin-top: 50px;
@@ -190,11 +193,10 @@
   </a>
   
   <!-- BOTÃO PRIVACY -->
-  <a href="COLE_AQUI_O_LINK_DO_SEU_SITE" 
-     id="btn-pagamento"
-     class="btn btn-privacy"
-     target="_blank" rel="noopener noreferrer"
-     onclick="enviarEvento('Lead');">
+ <a href="COLE_AQUI_O_LINK_DO_SEU_SITE" 
+   id="btn-pagamento"
+   class="btn btn-privacy"
+   target="_blank" rel="noopener nore
     <!-- COLE AQUI O LOGO DO SEU SITE -->
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd4NkCROqqNrGwjEUEiBv_9DJqMLBjQOa4eg&s" alt="Privacy">
     Meu Privacy
