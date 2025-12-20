@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta viewport="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meus Conteúdos 🔥</title>
 
-  <!-- META PIXEL (LINHAS 9–38) -->
+  <!-- META PIXEL -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -140,13 +140,19 @@
       height: 22px;
     }
 
-    .btn-pay {
-      background: linear-gradient(90deg, #ff0057, #ff7b00);
-      box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
+    .btn-privacy {
+      background: linear-gradient(90deg, #111, #000);
+      box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
+      letter-spacing: 1px;
     }
-    .btn-pay:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 35px rgba(255, 120, 0, 0.9);
+    .btn-privacy:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 40px rgba(255, 0, 87, 0.9);
+    }
+    .btn-privacy img {
+      width: 26px;
+      height: 26px;
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
     }
 
     footer {
@@ -154,23 +160,6 @@
       font-size: 0.9rem;
       color: #777;
     }
-    
-    .btn-privacy {
-  background: linear-gradient(90deg, #111, #000);
-  box-shadow: 0 0 25px rgba(255, 0, 87, 0.6);
-  letter-spacing: 1px;
-}
-
-.btn-privacy:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 40px rgba(255, 0, 87, 0.9);
-}
-
-.btn-privacy img {
-  width: 26px;
-  height: 26px;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
-}
 
   </style>
 </head>
@@ -186,37 +175,32 @@
   <p>Entre no grupo de prévias, fale no WhatsApp ou garanta agora o acesso com desconto especial!</p>
 
   <!-- BOTÃO 1 Whatsapp (Lead) -->
-  
- <a href="https://wa.me/5564992422849?text=Oi%E2%80%A6%20vim%20ver%20o%20que%20voc%C3%AA%20libera%20s%C3%B3%20no%20privado%20%F0%9F%91%80"
-     id="btn-whatsapp" class="btn btn-whatsapp" target="_blank"
-     onclick="fbq('track', 'Lead');">
+  <a href="https://wa.me/5564992422849?text=Oi%E2%80%A6%20vim%20ver%20o%20que%20voc%C3%AA%20libera%20s%C3%B3%20no%20privado%20%F0%9F%91%80"
+     id="btn-whatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
+     onclick="enviarEvento('Lead');">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     Conversar comigo no Whatsapp😈🔞
   </a>
   
   <!-- BOTÃO 2 (Lead) -->
-  <a href="https://t.me/MeuGrupinhDePrevias" id="btn-previas" class="btn btn-preview" target="_blank"
-     onclick="fbq('track', 'Lead');">
+  <a href="https://t.me/MeuGrupinhDePrevias" id="btn-previas" class="btn btn-preview" target="_blank" rel="noopener noreferrer"
+     onclick="enviarEvento('Lead');">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
     Entrar no meu Grupo de Prévias
   </a>
   
- <!-- BOTÃO PRIVACY -->
-<a href="#"
-   id="btn-pagamento"
-   class="btn btn-pay btn-privacy"
-   target="_blank"
-   onclick="fbq('track', 'Lead');">
-
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Privacy_logo.png" alt="Privacy">
-  <span>Meu Privacy</span>
-</a>
-
+  <!-- BOTÃO PRIVACY -->
+  <a href="COLE_AQUI_O_LINK_DO_SEU_SITE" 
+     id="btn-pagamento"
+     class="btn btn-privacy"
+     target="_blank" rel="noopener noreferrer"
+     onclick="enviarEvento('Lead');">
+    <!-- COLE AQUI O LOGO DO SEU SITE -->
+    <img src="COLE_AQUI_A_LOGO_DO_SITE" alt="Privacy">
+    Meu Privacy
+  </a>
 
   <footer>© 2024 | Meus Conteúdos</footer>
-  <script>
- 
-    
-</div>
+
 </body>
 </html>
