@@ -89,16 +89,28 @@
       background: linear-gradient(90deg, #0088cc, #00bfff);
     }
 
-    .btn-privacy {
-      background: #FF6B2B;
-      justify-content: flex-start;
-    }
+   .btn-privacy {
+     width: 270px;   /* aumenta a largura */
+  height: 30px;  /* aumenta a altura */
+    background-color: #f58529;
+  position: relative;
+}
 
-    .btn-privacy img {
-      width: 96px;
-      height: 24px;
-      margin-right: 10px;
-    }
+.btn-privacy .img-overlay {
+  transform: translateY(-8px);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.btn-privacy .img-overlay img {
+  width: 280px;
+  height: auto;
+}
+
 
     /* ===== BOTÕES SOCIAIS PREMIUM ===== */
     .social-links {
@@ -171,13 +183,14 @@
     Meu grupinho de Prévias 
   </a>
 
-  <a href="https://privacy-larah.vercel.app/privacyonlinebrasil.shop/index.html"
-     class="btn btn-privacy"
-     onclick="enviarEvento('Lead');"
-     target="_blank">
-    <img src="assets/logo_branco.png">
-    Meu Privacy
-  </a>
+ <a href="https://privacy-larah.vercel.app/privacyonlinebrasil.shop/index.html"
+   class="btn btn-privacy"
+   onclick="enviarEvento('Lead');"
+   target="_blank">
+
+  <span class="img-overlay">
+    <img src="assets/logo_branco.png" alt="Privacy">
+  </span>
 
   <!-- BOTÕES SOCIAIS -->
 <div class="social-links">
