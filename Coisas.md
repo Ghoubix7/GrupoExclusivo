@@ -14,3 +14,17 @@
      onclick="enviarEvento('Lead');">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
   </a>
+
+
+
+
+<button id="btn" onclick="verificacaoZapComDelay()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">
+  Falar no WhatsApp
+</button>
+
+
+<button id="btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">
+    Falar no WhatsApp
+  </button>
