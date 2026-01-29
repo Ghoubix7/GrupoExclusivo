@@ -134,18 +134,13 @@ button.active {
 
     
 
-<a href="https://api.whatsapp.com/send/?phone=5511919347279&text=Oiii+Larah%2C+quero+ter+acesso+a+todos+seu+conte%C3%BAdo&type=phone_number&app_absent=0"
-   class="btn btn-whatsapp"
-   target="_blank"
-   onclick="fbq('trackCustom','Concluiu Verificação Zap');"
-   rel="noopener noreferrer">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="22">
+<button id="btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">
   Falar no WhatsApp
-</a>
+</button>
 
 
 
-    
 
   <div class="note">
     O botão será liberado após selecionar as opções
@@ -163,7 +158,12 @@ function check() {
   if (age.checked && pay && pay.value === "pix") {
     btn.classList.add("active");
     btn.onclick = () => {
-      window.location.href = "https://wa.me/5511919347279?text=Oiii%20Larah%2C%20quero%20ter%20acesso%20a%20todos%20seu%20conte%C3%BAdo";
+      fbq('trackCustom', 'Concluiu Verificação Zap');
+
+      window.open(
+        "https://api.whatsapp.com/send/?phone=5511919347279&text=Oiii+Larah%2C+quero+ter+acesso+a+todos+seu+conte%C3%BAdo",
+        "_blank"
+      );
     };
   } 
   else if (age.checked && pay && pay.value === "no") {
@@ -178,6 +178,7 @@ function check() {
 age.addEventListener("change", check);
 radios.forEach(r => r.addEventListener("change", check));
 </script>
+
 
 
 
