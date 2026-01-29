@@ -132,10 +132,15 @@ button.active {
     Não tenho agora (ver prévias)
   </label>
 
-  <button id="btn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">
-    Falar no WhatsApp
-  </button>
+    
+
+<button id="btn" onclick="verificacaoZapComDelay()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20">
+  Falar no WhatsApp
+</button>
+
+
+    
 
   <div class="note">
     O botão será liberado após selecionar as opções
@@ -168,6 +173,21 @@ function check() {
 age.addEventListener("change", check);
 radios.forEach(r => r.addEventListener("change", check));
 </script>
+
+
+
+    <script>
+function verificacaoZapComDelay() {
+  // dispara a conversão personalizada
+  fbq('trackCustom', 'Concluiu Verificação Zap');
+
+  // pequeno delay para garantir o envio do evento
+  setTimeout(function () {
+    window.location.href = "https://wa.me/5599999999999";
+  }, 300);
+}
+</script>
+
 
 </body>
 </html>
